@@ -426,11 +426,12 @@
   @media (max-width: 780px){
     body{ overflow:auto; }
     .app{ flex-direction:column; border-radius:16px; height:calc(100dvh - max(12px, env(safe-area-inset-top) + env(safe-area-inset-bottom))); min-height:0; }
-    .index{ width:100%; height:auto; max-height:34dvh; min-height:0; flex-direction:row; flex-wrap:nowrap; padding:10px; overflow:hidden; }
+    .index{ width:100%; height:auto; max-height:34dvh; min-height:0; flex-direction:column; padding:10px; overflow:hidden; }
     .index-title{ display:none; }
-    .tab-scroll{ flex:1 1 auto; min-width:0; flex-direction:row; flex-wrap:nowrap; overflow-x:auto; overflow-y:hidden; padding-bottom:2px; scrollbar-width:none; }
+    .tab-scroll{ flex:1 1 auto; min-width:0; width:100%; flex-direction:row; flex-wrap:nowrap; overflow-x:auto; overflow-y:hidden; padding-bottom:2px; scrollbar-width:none; }
     .tab-scroll::-webkit-scrollbar{ display:none; }
-    .index-utility{ flex:0 0 auto; flex-direction:row; border-top:none; border-left:2px dashed var(--paper-line); padding-top:0; padding-left:8px; margin-top:0; margin-left:8px; }
+    .index-utility{ flex:0 0 auto; width:100%; flex-direction:row; overflow-x:auto; overflow-y:hidden; border-top:2px dashed var(--paper-line); border-left:none; padding-top:8px; padding-left:0; margin-top:8px; margin-left:0; scrollbar-width:none; }
+    .index-utility::-webkit-scrollbar{ display:none; }
     .tab, .add-tab-btn{ min-height:44px; padding:9px 13px; white-space:nowrap; width:auto; }
     .main{ min-height:0; padding:20px 16px max(28px, env(safe-area-inset-bottom)); }
     .main-wrap::before{ font-size:100px; }
